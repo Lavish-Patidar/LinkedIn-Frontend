@@ -32,10 +32,8 @@ const SliderBox = styled(Box)(({ theme }) => ({
 
 const Navbar = () => {
     const [showInfo, setShowInfo] = useState(false);
-    const [showMenu, setShowMenu] = useState(false);
     const [mobileOpen, setMobileOpen] = useState(false);
     const sliderBoxRef = useRef(null);
-
 
 
     useEffect(() => {
@@ -55,10 +53,6 @@ const Navbar = () => {
     const toggleInfo = () => {
         setShowInfo(!showInfo);
     };
-
-    const handleManu = () => {
-        setShowMenu(!showMenu);
-    }
 
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
@@ -80,7 +74,7 @@ const Navbar = () => {
                     </Box>
                 </Box>
 
-                <MenuIcon sx={{ color: '#545454ef', fontSize: 40, cursor: 'pointer', display: { xs: 'block', sm: 'block', md: 'none', lg: 'none' } }} onClick={handleManu} />
+                <MenuIcon sx={{ color: '#545454ef', fontSize: 40, cursor: 'pointer', display: { xs: 'block', sm: 'block', md: 'none', lg: 'none' } }} onClick={handleDrawerToggle} />
 
                 <Box display={'flex'} alignItems={'center'} sx={{ display: { xs: 'none', sm: 'none', md: 'flex', lg: 'block' }, gap: { md: 1 } }}>
                     <Link to={'/'}><Button className='Button' ><HomeIcon className='Icons' sx={{ fontSize: 40 }} /> Home</Button></Link>
