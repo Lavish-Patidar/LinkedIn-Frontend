@@ -1,0 +1,21 @@
+.Icons {
+    color: #545454ef;
+    width: auto;
+    height: 2.3rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.Icons :hover {
+    color: black;
+}
+
+.Button {
+    color: rgba(84, 84, 84, 0.937) !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.Button :hover {
+    color: black !important;
+}
